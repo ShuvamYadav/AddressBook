@@ -50,11 +50,11 @@ public class HomePage {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		Icon icon = new ImageIcon("E:\\eclipse\\JavaProject\\src\\search-icon.png");
-		Icon icon1 = new ImageIcon("E:\\eclipse\\JavaProject\\src\\table-insert-icon.png");
-		Icon icon2 = new ImageIcon("E:\\eclipse\\JavaProject\\src\\addressbook_main.png");
-		Icon icon3 = new ImageIcon("E:\\eclipse\\JavaProject\\src\\Monitor-icon.png");
-		Icon icon4 = new ImageIcon("E:\\eclipse\\JavaProject\\src\\symbol-delete-icon.png");
+		Icon icon = new ImageIcon(this.getClass().getResource("/search-icon.png"));
+		Icon icon1 = new ImageIcon(this.getClass().getResource("/table-insert-icon.png"));
+		Icon icon2 = new ImageIcon(this.getClass().getResource("/addressbook_main.png"));
+		Icon icon3 = new ImageIcon(this.getClass().getResource("/Monitor-icon.png"));
+		Icon icon4 = new ImageIcon(this.getClass().getResource("/symbol-delete-icon.png"));
 		frame = new JFrame("ADDRESSBOOK");
 		frame.setBackground(Color.LIGHT_GRAY);
 		frame.setBounds(100, 100, 748, 470);

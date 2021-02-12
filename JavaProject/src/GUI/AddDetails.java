@@ -31,40 +31,49 @@ import DatabaseOperations.Person;
 
 public class AddDetails extends JFrame {
 
-	private JPanel contentPane;
+	public static JPanel contentPane;
 	private JCheckBox chckbxNewCheckBox;
 	private JCheckBox chckbxNewCheckBox_1;
 	private JCheckBox chckbxNewCheckBox_2;
-
+	public static JFrame frame;
+	public static JTextField textField;
+	public static JTextField textField_1;
+	public static JTextField textField_2;
+	public static JTextField textField_3;
+	public static JTextField textField_4;
+	public static JTextField textField_5;
+	public static JTextField textField_7;
+	public static JTextField textField_6;
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					AddDetails frame = new AddDetails();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					 frame = new AddDetails();
+//					 frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
 	public AddDetails() {
-		Icon icon = new ImageIcon("E:\\eclipse\\JavaProject\\src\\addressbook_1.png");
-		Icon icon1 = new ImageIcon("E:\\eclipse\\JavaProject\\src\\addressbook_save.png");
-		Icon icon2 = new ImageIcon("E:\\eclipse\\JavaProject\\src\\addressbook_cancel.png");
+		frame =new JFrame();
+		Icon icon = new ImageIcon(this.getClass().getResource("/addressbook_1.png"));
+		Icon icon1 = new ImageIcon(this.getClass().getResource("/addressbook_save.png"));
+		Icon icon2 = new ImageIcon(this.getClass().getResource("/addressbook_cancel.png"));
 		// size of frame
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 539, 456);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(100, 100, 539, 456);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
+		frame.setContentPane(contentPane);
 		contentPane.setLayout(null);
 
 		// image on top left corner of frame
@@ -95,7 +104,7 @@ public class AddDetails extends JFrame {
 		contentPane.add(lblNewLabel_2);
 
 		// Firstname - JtextField
-		JTextField textField = new JTextField();
+	    textField = new JTextField();
 		textField.setFont(new Font("Tw Cen MT Condensed", Font.PLAIN, 16));
 		textField.setBounds(210, 60, 266, 16);
 		contentPane.add(textField);
@@ -108,7 +117,7 @@ public class AddDetails extends JFrame {
 		contentPane.add(lblNewLabel_3);
 
 		// Surname - JtextField
-		JTextField textField_1 = new JTextField();
+		textField_1 = new JTextField();
 		textField_1.setFont(new Font("Tw Cen MT Condensed", Font.PLAIN, 16));
 		textField_1.setBounds(210, 80, 266, 16);
 		contentPane.add(textField_1);
@@ -193,7 +202,7 @@ public class AddDetails extends JFrame {
 		contentPane.add(lblNewLabel_8);
 		
         // Street - JtextField
-		JTextField textField_2 = new JTextField();
+		 textField_2 = new JTextField();
 		textField_2.setFont(new Font("Tw Cen MT Condensed", Font.PLAIN, 16));
 		textField_2.setBounds(288, 165, 188, 16);
 		contentPane.add(textField_2);
@@ -206,7 +215,7 @@ public class AddDetails extends JFrame {
 		contentPane.add(lblNewLabel_9);
 
 		// City - JtextField
-		JTextField textField_3 = new JTextField();
+		 textField_3 = new JTextField();
 		textField_3.setFont(new Font("Tw Cen MT Condensed", Font.PLAIN, 16));
 		textField_3.setBounds(288, 183, 188, 16);
 		contentPane.add(textField_3);
@@ -218,7 +227,7 @@ public class AddDetails extends JFrame {
 		lblNewLabel_10.setBounds(210, 204, 46, 14);
 		contentPane.add(lblNewLabel_10);
 		// State - JtextField
-		JTextField textField_4 = new JTextField();
+		 textField_4 = new JTextField();
 		textField_4.setFont(new Font("Tw Cen MT Condensed", Font.PLAIN, 16));
 		textField_4.setBounds(288, 202, 188, 16);
 		contentPane.add(textField_4);
@@ -231,7 +240,7 @@ public class AddDetails extends JFrame {
 		contentPane.add(lblNewLabel_11);
 
 		// Pin Number - JtextField
-		JTextField textField_5 = new JTextField();
+		 textField_5 = new JTextField();
 		textField_5.setFont(new Font("Tw Cen MT Condensed", Font.PLAIN, 16));
 		textField_5.setBounds(288, 220, 188, 16);
 		contentPane.add(textField_5);
@@ -252,7 +261,7 @@ public class AddDetails extends JFrame {
 		contentPane.add(comboBox_1);
 		
 		// Phone - JtextField 
-		JTextField textField_7 = new JTextField();
+		 textField_7 = new JTextField();
 		textField_7.setFont(new Font("Tw Cen MT Condensed", Font.PLAIN, 16));
 		textField_7.setBounds(268, 259, 127, 16);
 		contentPane.add(textField_7);
@@ -265,7 +274,7 @@ public class AddDetails extends JFrame {
 		contentPane.add(lblNewLabel_14);
 
 		// Email - JtextField
-		JTextField textField_6 = new JTextField();
+		textField_6 = new JTextField();
 		textField_6.setFont(new Font("Tw Cen MT Condensed", Font.PLAIN, 16));
 		textField_6.setBounds(210, 311, 266, 17);
 		contentPane.add(textField_6);
@@ -306,7 +315,6 @@ public class AddDetails extends JFrame {
 				p.addDetails(title,firstName,surName,gender,dateOfBirth,street,city,state,pinNumber,phone,email);
 				//p.addDetails(title, firstName, surName, gender, dateOfBirth);
 				
-				
 			}
 		});
 		btnNewButton.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 16));
@@ -324,6 +332,7 @@ public class AddDetails extends JFrame {
 		});
 		btnNewButton_2.setBounds(270, 350, 103, 30);
 		contentPane.add(btnNewButton_2);
+		frame.setVisible(true);
 
 	}
 }

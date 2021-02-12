@@ -20,9 +20,9 @@ import javax.swing.plaf.synth.SynthTextFieldUI;
 import DatabaseOperations.Person;
 
 public class SearchDetails extends JFrame {
-	public static SearchDetails frame;
+	public static JFrame frame;
 
-	private JPanel contentPane;
+	public static JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -47,10 +47,10 @@ public class SearchDetails extends JFrame {
 		JTextField textField;
 		textField = new JTextField();
 		JTextField textField_1 = new JTextField();
-		Icon icon = new ImageIcon("E:\\eclipse\\JavaProject\\src\\addressbook_1.png");
-		Icon icon1 = new ImageIcon("E:\\eclipse\\JavaProject\\src\\search-icon.png");
+		Icon icon = new ImageIcon(this.getClass().getResource("/addressbook_1.png"));
+		Icon icon1 = new ImageIcon(this.getClass().getResource("/search-icon.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 424);
+		setBounds(100, 100, 500, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
