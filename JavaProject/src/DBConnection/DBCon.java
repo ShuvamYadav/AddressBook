@@ -9,7 +9,6 @@ public class DBCon {
 	private static final String USER = "root";
 	private static final String PASSWORD = "Transmutation1";
 	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-	
 	static {
 		try{
 			Class.forName(DRIVER);
@@ -21,6 +20,4 @@ public class DBCon {
 	public static Connection getConnection() throws SQLException{
 		return DriverManager.getConnection(URL, USER, PASSWORD);
 	}
-
-
 }

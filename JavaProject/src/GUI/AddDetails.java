@@ -29,13 +29,14 @@ import com.toedter.calendar.JDateChooser;
 import DBConnection.DBCon;
 import DatabaseOperations.Person;
 
-public class AddDetails extends JFrame {
+public class AddDetails extends JFrame{
 
 	public static JPanel contentPane;
 	private JCheckBox chckbxNewCheckBox;
 	private JCheckBox chckbxNewCheckBox_1;
 	private JCheckBox chckbxNewCheckBox_2;
 	public static JFrame frame;
+	public static JButton btnNewButton;
 	public static JTextField textField;
 	public static JTextField textField_1;
 	public static JTextField textField_2;
@@ -45,26 +46,10 @@ public class AddDetails extends JFrame {
 	public static JTextField textField_7;
 	public static JTextField textField_6;
 	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					 frame = new AddDetails();
-//					 frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
-	/**
 	 * Create the frame.
 	 */
 	public AddDetails() {
-		frame =new JFrame();
+		frame =new JFrame("Add New User");
 		Icon icon = new ImageIcon(this.getClass().getResource("/addressbook_1.png"));
 		Icon icon1 = new ImageIcon(this.getClass().getResource("/addressbook_save.png"));
 		Icon icon2 = new ImageIcon(this.getClass().getResource("/addressbook_cancel.png"));
@@ -281,7 +266,7 @@ public class AddDetails extends JFrame {
 		textField_6.setColumns(10);
 		
 		// Save Button
-		JButton btnNewButton = new JButton(icon1);
+		 btnNewButton = new JButton(icon1);
 		btnNewButton.setText("SAVE");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

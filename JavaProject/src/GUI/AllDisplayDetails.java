@@ -30,7 +30,7 @@ import java.awt.event.ActionEvent;
 public class AllDisplayDetails extends JFrame {
 
 	private JPanel contentPane;
-	private JTable table;
+	//private JTable table;
 	private JButton btnNewButton;
 
 	/**
@@ -54,19 +54,17 @@ public class AllDisplayDetails extends JFrame {
 	 */
 	public AllDisplayDetails() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 512, 300);
+		setBounds(100, 100, 600, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		JTable table = new JTable();
+		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 88, 465, 144);
+		scrollPane.setBounds(10,40, 550,300);
 		contentPane.add(scrollPane);
-		
-		table = new JTable();
 		scrollPane.setViewportView(table);
-		
 		btnNewButton = new JButton("LOAD");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -77,16 +75,7 @@ public class AllDisplayDetails extends JFrame {
 					con = DBCon.getConnection();
 					PreparedStatement ps = con.prepareCall("SELECT * FROM person");
 					ResultSet rs = ps.executeQuery();
-					table.setModel(DbUtils.resultSetToTableModel(rs));
-					
-					JTableHeader th = table.getTableHeader();
-					TableColumnModel tcm = th.getColumnModel();
-					TableColumn tc = tcm.getColumn(0);
-					tc.setHeaderValue( "Title" );
-					th.repaint();
-					th.setForeground(Color.BLUE);
-
-					
+					table.setModel(DbUtils.resultSetToTableModel(rs));		
 				
 				} catch (SQLException e) {
 					JOptionPane.showMessageDialog(null, "Connection Error!");

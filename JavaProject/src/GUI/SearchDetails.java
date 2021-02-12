@@ -86,11 +86,7 @@ public class SearchDetails extends JFrame {
 		textField.setColumns(10);
 		textField_1.setBounds(202, 60, 165, 20);
 		contentPane.add(textField_1);
-		textField_1.setColumns(10);
-		
-		
-		
-		
+		textField_1.setColumns(10);	
 	}
 
 
