@@ -31,7 +31,7 @@ public class SearchDetails extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-				    frame = new SearchDetails();
+					frame = new SearchDetails();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -55,39 +55,40 @@ public class SearchDetails extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblNewLabel_2 = new JLabel(icon);
 		lblNewLabel_2.setBounds(13, 24, 95, 92);
 		contentPane.add(lblNewLabel_2);
-		
+
 		JLabel lblNewLabel = new JLabel("Firstname:");
 		lblNewLabel.setBounds(118, 35, 74, 14);
 		lblNewLabel.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 16));
 		contentPane.add(lblNewLabel);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("Surname:");
 		lblNewLabel_1.setBounds(118, 60, 74, 14);
 		lblNewLabel_1.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 16));
 		contentPane.add(lblNewLabel_1);
-		
+
 		JButton btnNewButton = new JButton(icon1);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Person p=new Person();
+				Person p = new Person();
 				p.searchDetails(textField.getText().toString(), textField_1.getText().toString());
-				
+
 			}
 		});
+
 		btnNewButton.setFont(new Font("Tw Cen MT Condensed Extra Bold", Font.PLAIN, 15));
-		btnNewButton.setBounds(175, 93, 90, 35);
+		btnNewButton.setBounds(100, 93, 90, 35);
 		contentPane.add(btnNewButton);
 		textField.setBounds(202, 33, 165, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		textField_1.setBounds(202, 60, 165, 20);
 		contentPane.add(textField_1);
-		textField_1.setColumns(10);	
-	}
+		textField_1.setColumns(10);
 
+	}
 
 }

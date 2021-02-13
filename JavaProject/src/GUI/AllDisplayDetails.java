@@ -30,7 +30,7 @@ import java.awt.event.ActionEvent;
 public class AllDisplayDetails extends JFrame {
 
 	private JPanel contentPane;
-	//private JTable table;
+	// private JTable table;
 	private JButton btnNewButton;
 
 	/**
@@ -62,7 +62,7 @@ public class AllDisplayDetails extends JFrame {
 		JTable table = new JTable();
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10,40, 550,300);
+		scrollPane.setBounds(10, 40, 550, 300);
 		contentPane.add(scrollPane);
 		scrollPane.setViewportView(table);
 		btnNewButton = new JButton("LOAD");
@@ -70,17 +70,17 @@ public class AllDisplayDetails extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				Connection con = null;
 				Statement st = null;
-				
+
 				try {
 					con = DBCon.getConnection();
 					PreparedStatement ps = con.prepareCall("SELECT * FROM person");
 					ResultSet rs = ps.executeQuery();
-					table.setModel(DbUtils.resultSetToTableModel(rs));		
-				
+					table.setModel(DbUtils.resultSetToTableModel(rs));
+
 				} catch (SQLException e) {
 					JOptionPane.showMessageDialog(null, "Connection Error!");
 					e.printStackTrace();
-			
+
 				} finally {
 					try {
 						if (st != null)
@@ -99,8 +99,4 @@ public class AllDisplayDetails extends JFrame {
 		btnNewButton.setBounds(10, 11, 89, 23);
 		contentPane.add(btnNewButton);
 	}
-	
-//	private void threader() {
-//		
-//	}
 }

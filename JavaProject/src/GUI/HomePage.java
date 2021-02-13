@@ -68,7 +68,7 @@ public class HomePage {
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				AddDetails ad = new AddDetails();
-				ad.setVisible(true);
+				// ad.setVisible(true);
 			}
 		});
 		frame.getContentPane().setLayout(null);
