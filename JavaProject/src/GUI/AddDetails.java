@@ -45,25 +45,7 @@ public class AddDetails extends JFrame {
 	public static JTextField textField_5;
 	public static JTextField textField_7;
 	public static JTextField textField_6;
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					 frame = new AddDetails();
-//					 frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
-	/**
-	 * Create the frame.
-	 */
 	public AddDetails() {
 		frame = new JFrame();
 		Icon icon = new ImageIcon(this.getClass().getResource("/addressbook_1.png"));
